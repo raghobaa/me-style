@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+.atags{
+
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    margin: 0ch;
+    padding: 0px;
+    text-decoration: none;
+
+
+}
+
+.m1,.m2,.m3{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: black;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    position: relative;
+
+}
+
+.m1::before, .m2::before, .m3::before{
+    content: "";
+    width: 109%;
+    height: 115%;
+    background-image: linear-gradient(to bottom right ,rgb(0, 162, 255),purple);
+    z-index: -1;
+    position: absolute;
+    border-radius: 50px;
+}
+.m1:hover, .m2:hover, .m3:hover {
+    z-index: 1; /* Keep above other elements */
+    transform: scale(1.1); /* Slight enlargement for hover feedback */
+    box-shadow: 0 0 20px 5px rgba(0, 217, 255, 0.7), 
+                0 0 40px 10px rgba(0, 162, 255, 0.5)
+               ; /* Multi-layered glow */
+    color: rgb(2, 2, 2); /* Change text color on hover */
+    background-color: black; /* Optional: Dark background for contrast */
+    transition: all 0.3s ease; /* Smooth effect */
+}
+
